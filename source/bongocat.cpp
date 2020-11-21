@@ -55,13 +55,11 @@ int main( int argc, char **argv ) {
 						KeyPressMask | KeyReleaseMask | FocusChangeMask );
 				break;
 			case KeyPress :
-				clear();
 				ncDraw( 0, 0, alt );
 				alt = !alt;
 				refresh();
 				break;
 			case KeyRelease :
-				clear();
 				mvprintw( 0, 0, unPressed );
 				refresh();
 				break;
