@@ -53,7 +53,7 @@ int main( int argc, char **argv ) {
 						KeyPressMask | KeyReleaseMask | FocusChangeMask );
 				break;
 			case KeyPress :
-				std::cout << "key pressed in " << curFocus << "\n";
+				std::cout << "key pressed is " << xevent.xkey.keycode << "\n";
 				break;
 			case KeyRelease :
 				std::cout << "key unpressed in " << curFocus << "\n";

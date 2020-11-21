@@ -6,8 +6,8 @@
 
 void ncDraw( int yPos, int xPos, int lr ) {
 	
-	const char* rightPressed = "                       /\\__\n                   .--^    ^^^^--__/\\\n---...          .-^  .               |\n      ^^^---...^       -^-  .  .-.   \\\n         -    t_.--^...       | @ `   \\\n         -^             ^^^---.\\..     \\\n            /   |  `              ^^^^--|..\n                                            ^^^---...";
-	const char* leftPressed = "                        /\\__\n               .-.  .--^    ^^^^--__/\\\n---...        | @  ` .                |\n      ^^^---...\\       -^-  .         \\\n               ^^^---...               \\\n                        ^^^---./        \\\n                         --   t_..-*^^--|..\n                            /   |   \\       ^^^---...";
+	const char* rightPressed = "                       /\\__\n                   .--^    ^^^^--__/\\\n---...          .-^  .               |\n      ^^^---...^       -^-  .  .-.   \\\n         -    t_.--^...       | @ `   \\\n         -^             ^^^---.\\..     \\\n            /   |  `              ^^^^-i...\n                                            ^^^---...";
+	const char* leftPressed = "                        /\\__\n               .-.  .--^    ^^^^--__/\\\n---...        | @  ` .                |\n      ^^^---...\\       -^-  .         \\\n               ^^^---...               \\\n                        ^^^---./        \\\n                         --   t_..-*^^--i..\n                            /   |   \\       ^^^---...";
 	
 	move( yPos, xPos );
 	if( lr ) {
@@ -17,7 +17,7 @@ void ncDraw( int yPos, int xPos, int lr ) {
 	}
 }
 
-const char* unPressed = "                        /\\__\n               .-.  .--^    ^^^^--__/\\\n---...        | @  ` .                |\n      ^^^---...\\       -^-  .  .-.    \\\n               ^^^---...      | @ `    \\\n                        ^^^---.\\..      \\\n                                  ^^^^--|..\n                                            ^^^---...";
+const char* unPressed = "                        /\\__\n               .-.  .--^    ^^^^--__/\\\n---...        | @  ` .                |\n      ^^^---...\\       -^-  .  .-.    \\\n               ^^^---...      | @ `    \\\n                        ^^^---.\\..      \\\n                                  ^^^^--i..\n                                            ^^^---...";
 
 int main( int argc, char **argv ) {
 
@@ -41,17 +41,12 @@ int main( int argc, char **argv ) {
 	initscr();																					// Initialise screen
 	noecho();																						// Don't echo anything
 	cbreak();																						// Break on C-c
-
-	int yMax, xMax;
-	getmaxyx( stdscr, yMax, xMax );
+	curs_set( 0 );																			// Make cursor invisible
 
 	while( 1 ) {
 		XNextEvent( display, &xevent );										// Listen for events
 		switch( xevent.type ) {
 			case FocusOut :
-				if ( curFocus != root ) {
-					XSelectInput( display, curFocus, 0 );
-				}
 				XGetInputFocus ( display, &curFocus, &revert );	// Get new focus
 				if ( curFocus == PointerRoot )
 					curFocus = root;														// Change focus to root
@@ -61,7 +56,7 @@ int main( int argc, char **argv ) {
 				break;
 			case KeyPress :
 				clear();
-				ncDraw(0, 0, alt);
+				ncDraw( 0, 0, alt );
 				alt = !alt;
 				refresh();
 				break;
@@ -72,7 +67,7 @@ int main( int argc, char **argv ) {
 				break;
 		}
 	}
-
+	
 	endwin();
 	
 	return 0;
