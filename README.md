@@ -1,6 +1,6 @@
 # Command-Line Bongo Cat
 
-An animated bongo cat which responds to keypresses from the comfort of your own terminal.
+An animated bongo cat which responds to keypresses from the comfort of your own terminal. Perfect for distracting you while typing reports and coding.
 
 ![bongos go brrrr](images/bongocat.gif)
 
@@ -37,4 +37,5 @@ just run `bongocat`
 
 ## Credits
 
+ - [StrayRogue](https://twitter.com/StrayRogue) for their original drawing of bongo cat
  - [This](https://stackoverflow.com/questions/22749444/listening-to-keyboard-events-without-consuming-them-in-x11-keyboard-hooking) StackOverflow answer
