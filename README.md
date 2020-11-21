@@ -2,6 +2,8 @@
 
 An animated bongo cat which responds to keypresses from the comfort of your own terminal.
 
+![bongos go brrrr](images/bongocat.gif)
+
 ## Installation
 
 ### Dependencies
