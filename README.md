@@ -9,6 +9,7 @@ An animated bongo cat which responds to keypresses from the comfort of your own 
 Only works on X server
 
 requires:
+
  - Xlib
  - Xutils
  - NCurses
@@ -22,7 +23,11 @@ requires:
 
 just run `bongocat`
 
-## Things to come (maybe)
+## (Known) Bugs
+
+ - Dies when active window is closed
+
+## Things to come
 
  - colours
  - a config system of sorts
