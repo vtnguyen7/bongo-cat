@@ -1,0 +1,17 @@
+# centering = true
+
+y_press = 78
+x_press = 32
+
+y_release = 2
+x_release = 45
+
+# fg_colour = COLOR_WHITE
+# bg_colour = COLOR_BLACK
+
+# pressed_fg_colour = COLOR_WHITE
+# pressed_bg_colour = COLOR_BLACK
+
+# left_pressed = 
+# right_pressed = 
+# unpressed = 
