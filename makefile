@@ -12,5 +12,8 @@ bongoWriter.o: source/writer/bongoWriter.cpp source/writer/bongoWriter.h
 bongoConfig.o: source/config/bongoConfig.cpp source/config/bongoConfig.h source/config/bongoConstants.h
 	g++ $(FLAGS) -c source/config/bongoConfig.cpp
 
+simpleclean:
+	rm *.o
+
 clean:
 	rm *.o bongocat
