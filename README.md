@@ -10,16 +10,21 @@ An animated bongo cat which responds to keypresses as you type, from the comfort
 
 Only works on X server
 
-requires:
+Requires:
 
  - Xlib
  - Xutils
  - NCurses
 
+### Simple install
+
+Move `bongocat` to your PATH
+
 ### Build
 
  1. Clone into this repository
- 2. Add bongocat to your PATH
+ 2. run `make`
+ 3. move the binary to your PATH
 
 ## Usage
 
@@ -35,8 +40,7 @@ Read the config file for more information.
 
 ## (Known) Bugs
 
- - ~~Dies when active window is closed~~
- - None. It's perfect
+ - The binary may not work on OpenSUSE. If this is the case, please try compiling from source
 
 ## Things to come
 
