@@ -80,6 +80,8 @@ int main( int argc, char **argv ) {
 				if ( xevent.xkey.keycode == 27 ) {
 					config::get_config();
 					config::set_centre( y_offset, x_offset );
+					init_pair( PRESSED_PAIR, config::pressed_fg_colour, config::pressed_bg_colour );
+					init_pair( UNPRESSED_PAIR, config::fg_colour, config::bg_colour );
 					clear;
 				}
 					

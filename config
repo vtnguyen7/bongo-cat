@@ -1,0 +1,53 @@
+#    ___                        _____     __ 
+#   / _ )___  ___  ___ ____    / ___/__ _/ /_
+#  / _  / _ \/ _ \/ _ `/ _ \  / /__/ _ `/ __/
+# /____/\___/_//_/\_, /\___/  \___/\_,_/\__/ 
+#                /___/
+
+# Put me in $HOME/.config/bongocat/
+
+# Uncomment the settings to set the config. All
+# settings are set to the default.
+
+#=================================================
+# POSITION SETTINGS
+#-------------------------------------------------
+# These are the starting coordinates for when 
+# the ascii art is pressed and when it's released.
+# Coordinates are in measured in cursor lengths.
+# (default = 0 for all). It's recommended that they
+# are all kept the same.
+#=================================================
+
+# x_press = 0
+# y_press = 0
+
+# x_release = 0
+# y_release = 0
+
+#==================================================
+# CENTERING
+#--------------------------------------------------
+# Set to 1 to center or 0 to no the art on the 
+# respective axes (default = 1). This overrides the 
+# position settings above.
+#==================================================
+
+# x_centering = 1
+# y_centering = 1
+
+#==================================================
+# COLOUR SETTINGS
+#--------------------------------------------------
+# You can change the colours for the foreground and
+# background for both the pressed and unpressed
+# states (default fg = 15, bg = 0). Uses 8/16 bit
+# terminal colours, which are enumerated by the 
+# indices 0-7 or 0-15.
+#==================================================
+
+# fg_colour = 15
+# bg_colour = 0
+
+# pressed_fg_colour = 15
+# pressed_bg_colour = 0

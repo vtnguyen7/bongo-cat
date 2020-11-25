@@ -53,7 +53,7 @@ void config::process( std::string line ) {
 			if ( setting == "y_release" ) config::y_release = stoi(line.substr(eq + 1, line.length()));
 			if ( setting == "x_release" ) config::x_release = stoi(line.substr(eq + 1, line.length()));
 			if ( setting == "fg_colour" ) config::fg_colour = stoi(line.substr(eq + 1, line.length()));
-			if ( setting == "bg_colour" ) config::fg_colour = stoi(line.substr(eq + 1, line.length()));
+			if ( setting == "bg_colour" ) config::bg_colour = stoi(line.substr(eq + 1, line.length()));
 			if ( setting == "pressed_fg_colour" ) config::pressed_fg_colour = stoi(line.substr(eq + 1, line.length()));
 			if ( setting == "pressed_bg_colour" ) config::pressed_bg_colour = stoi(line.substr(eq + 1, line.length()));
 			if ( setting == "y_centering" ) config::y_centering = stoi(line.substr(eq + 1, line.length()));

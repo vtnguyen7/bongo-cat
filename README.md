@@ -21,9 +21,17 @@ requires:
  1. Clone into this repository
  2. Add bongocat to your PATH
 
-## Run
+## Usage
 
-just run `bongocat`
+### Run
+
+Just run `bongocat`
+
+### Config
+
+Put the file `config` into the directory `$HOME/.config/bongocat/`
+
+Read the config file for more information.
 
 ## (Known) Bugs
 
@@ -32,8 +40,8 @@ just run `bongocat`
 
 ## Things to come
 
- - colours
- - a config system of sorts (e.g. for centering, padding, etc.)
+ - multicolour
+ - more ascii art options/config
  - cleaning up the awful source code
 
 ## Credits
