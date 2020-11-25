@@ -54,6 +54,8 @@ int main( int argc, char **argv ) {
 			curFocus, 
 			KeyPressMask | KeyReleaseMask | FocusChangeMask );
 
+	int ffocus = curFocus;
+
 	initscr();
 	noecho();
 	cbreak();
@@ -77,7 +79,7 @@ int main( int argc, char **argv ) {
 						KeyPressMask | KeyReleaseMask | FocusChangeMask );
 				break;
 			case KeyPress :
-				if ( xevent.xkey.keycode == 27 ) {
+				if ( xevent.xkey.keycode == 27 && curFocus == ffocus ) {
 					config::get_config();
 					config::set_centre( y_offset, x_offset );
 					init_pair( PRESSED_PAIR, config::pressed_fg_colour, config::pressed_bg_colour );

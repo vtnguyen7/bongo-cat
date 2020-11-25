@@ -1,4 +1,4 @@
-FLAGS = -lX11 -lncurses -I ~/bongo-cat/source/
+FLAGS = -lX11 -lncurses -ltinfo -I ~/bongo-cat/source/
 
 bongocat: bongocat.o bongoWriter.o bongoConfig.o
 	g++ $(FLAGS) bongocat.o bongoWriter.o bongoConfig.o -o bongocat
@@ -11,3 +11,6 @@ bongoWriter.o: source/writer/bongoWriter.cpp source/writer/bongoWriter.h
 
 bongoConfig.o: source/config/bongoConfig.cpp source/config/bongoConfig.h source/config/bongoConstants.h
 	g++ $(FLAGS) -c source/config/bongoConfig.cpp
+
+clean:
+	rm *.o bongocat
