@@ -8,13 +8,13 @@ An animated bongo cat which responds to keypresses as you type, from the comfort
 
 ### Dependencies
 
-Only works on X server
-
 Requires:
 
  - Xlib
  - Xutils
  - NCurses
+
+Note that this will work on Wayland. It is kinda broken on GNOME though due to the way it handles virtual desktops. I'm not currently working on it because I'm lazy. Feel free to fork and fix if you'd like.
 
 ### Simple install
 
